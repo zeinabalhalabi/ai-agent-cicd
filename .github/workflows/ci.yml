@@ -75,5 +75,5 @@ jobs:
             docker rm -f portfolio-app
             if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           }
-          docker run -d --platform linux/amd64 --name portfolio-app -p 127.0.0.1:8765:8000 ${{ env.IMAGE }}
+          docker run -d --platform linux/amd64 --name portfolio-app -p 127.0.0.1:8000:8000 ${{ env.IMAGE }}
           exit $LASTEXITCODE
